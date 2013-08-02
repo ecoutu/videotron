@@ -41,15 +41,14 @@ if __name__ == '__main__':
     subject = 'Videotron usage: ' + usage
     body = ''
 
-    headers = [
+    headers = '\r\n'.join([
         'from: ' + sender,
         'subject: ' + subject,
         'to: ' + sender,
         'mime-version: 1.0',
         'content-type: text/html'
-    ]
-    headers = '\r\n'.join(headers)
-
+    ])
+    
     message = headers + '\r\n\r\n' + body
 
     session = smtplib.SMTP('smtp.gmail.com', 587)
