@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/python
 
 import argparse
 import smtplib
@@ -22,7 +22,6 @@ if __name__ == '__main__':
     if res.status_code != 200:
         print 'Error when contacting Videotron usage site, got status code %s.' % (res.status_code, )
         sys.exit(0)
-
 
     soup = bs4.BeautifulSoup(res.content)
     usage = soup.find_all('td', 'reg')[7].string + ' GB'
