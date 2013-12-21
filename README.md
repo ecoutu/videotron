@@ -10,7 +10,7 @@ This tool will retrieve your monthly usage of a Videotron based service, optiona
 
     optional arguments:
       -h, --help            show this help message and exit
-      -e, --send-email      Gmail username
+      -e, --send-email      Send an email
       -l GMAIL_USERNAME, --gmail-username GMAIL_USERNAME
                             Gmail username
       -p GMAIL_PASSWORD, --gmail-password GMAIL_PASSWORD

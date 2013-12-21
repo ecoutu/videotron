@@ -11,7 +11,7 @@ URL = 'https://extranet.videotron.com/services/secur/extranet/tpia/Usage.do?lang
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Videotron usage checker')
-    parser.add_argument('-e', '--send-email', action='store_true', help='Gmail username')
+    parser.add_argument('-e', '--send-email', action='store_true', help='Send an email')
     parser.add_argument('-l', '--gmail-username', help='Gmail username')
     parser.add_argument('-p', '--gmail-password', help='Gmail password')
     parser.add_argument('-u', '--username', help='Videotron username', required=True)
@@ -48,7 +48,7 @@ if __name__ == '__main__':
         'mime-version: 1.0',
         'content-type: text/html'
     ])
-    
+
     message = headers + '\r\n\r\n' + body
 
     session = smtplib.SMTP('smtp.gmail.com', 587)
